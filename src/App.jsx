@@ -5,8 +5,6 @@ import AppLayout from "./layout/AppLayout";
 import Home from './pages/Dashboard/Home';
 
 
-import './App.css'
-
 function App() {
   const [count, setCount] = useState(0)
 
