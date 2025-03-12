@@ -5,6 +5,19 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --background-light: #ffffff;
+  --background-dark: #101828;
+}
+
+.dark {
+  background-color: var(--background-dark);
+}
+
+.light {
+  background-color: var(--background-light);
+}
+
 @theme {
   --font-*: initial;
   --font-outfit: Outfit, sans-serif;

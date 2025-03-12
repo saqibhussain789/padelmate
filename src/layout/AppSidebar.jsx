@@ -1,6 +1,14 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { Link, useLocation } from "react-router"
 
+import { HiOutlineChartBar } from "react-icons/hi"; // Statistics
+import { AiFillHome } from "react-icons/ai"; // My Club/Home
+import { FaUsers } from "react-icons/fa"; // Community
+import { BsChatDots } from "react-icons/bs"; // Chat
+import { GiSoccerBall } from "react-icons/gi"; // League
+import { MdOutlineArticle } from "react-icons/md"; // News
+
+
 // Assume these icons are imported from an icon library
 import {
   BoxCubeIcon,
@@ -16,42 +24,47 @@ import {
   UserCircleIcon
 } from "../icons"
 import { useSidebar } from "../context/SidebarContext"
-import SidebarWidget from "./SidebarWidget"
+
 
 const navItems = [
   {
-    icon: <GridIcon />,
-    name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }]
-  },
-  {
     icon: <CalenderIcon />,
-    name: "Calendar",
-    path: "/calendar"
+    name: "Booking",
+    path: "/"
   },
   {
-    icon: <UserCircleIcon />,
-    name: "User Profile",
-    path: "/profile"
+    icon: <HiOutlineChartBar />,
+    name: "Statistics",
+    path: "/statistics"
   },
   {
-    name: "Forms",
-    icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }]
+    name: "My Club",
+    icon: <AiFillHome />,
+    path: "/my-club"
+    
   },
   {
-    name: "Tables",
-    icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }]
+    name: "Community",
+    icon: <FaUsers />,
+    path: "/community"
+    
   },
   {
-    name: "Pages",
-    icon: <PageIcon />,
-    subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false }
-    ]
-  }
+    name: "Chat",
+    icon: <BsChatDots />,
+    path: "/chat"
+    
+  },
+  {
+    name: "League",
+    path: "/league",
+    icon: <GiSoccerBall />,
+  },
+  {
+    name: "News",
+    path: "/news",
+    icon: <MdOutlineArticle />,
+  },
 ]
 
 const othersItems = [
@@ -63,26 +76,7 @@ const othersItems = [
       { name: "Bar Chart", path: "/bar-chart", pro: false }
     ]
   },
-  {
-    icon: <BoxCubeIcon />,
-    name: "UI Elements",
-    subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false }
-    ]
-  },
-  {
-    icon: <PlugInIcon />,
-    name: "Authentication",
-    subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false }
-    ]
-  }
+  
 ]
 
 const AppSidebar = () => {
@@ -295,22 +289,22 @@ const AppSidebar = () => {
             <>
               <img
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src="/images/logo/padelmates.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={80}
+                height={80}
               />
               <img
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo/padelmates.svg"
                 alt="Logo"
-                width={150}
-                height={40}
+                width={80}
+                height={80}
               />
             </>
           ) : (
             <img
-              src="/images/logo/logo-icon.svg"
+              src="/images/logo/padelmates.svg"
               alt="Logo"
               width={32}
               height={32}
@@ -355,7 +349,7 @@ const AppSidebar = () => {
             </div>
           </div>
         </nav>
-        {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null}
+        {/* {isExpanded || isHovered || isMobileOpen ? <SidebarWidget /> : null} */}
       </div>
     </aside>
   )

@@ -5,6 +5,7 @@ import { useSidebar } from "../context/SidebarContext"
 import { ThemeToggleButton } from "../components/common/ThemeToggleButton"
 import NotificationDropdown from "../components/header/NotificationDropdown"
 import UserDropdown from "../components/header/UserDropdown"
+import LanguageTranslator from "../components/common/Translator"
 
 const AppHeader = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false)
@@ -158,7 +159,9 @@ const AppHeader = () => {
         >
           <div className="flex items-center gap-2 2xsm:gap-3">
             {/* <!-- Dark Mode Toggler --> */}
-            <ThemeToggleButton />
+            <LanguageTranslator />
+             {/* <!-- Dark Mode Toggler --> */}
+             <ThemeToggleButton />
             {/* <!-- Dark Mode Toggler --> */}
             <NotificationDropdown />
             {/* <!-- Notification Menu Area --> */}
