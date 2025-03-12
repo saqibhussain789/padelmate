@@ -28,56 +28,31 @@ import { useSidebar } from "../context/SidebarContext"
 
 const navItems = [
   {
-    icon: <CalenderIcon />,
-    name: "Booking",
-    path: "/"
-  },
-  {
-    icon: <HiOutlineChartBar />,
-    name: "Statistics",
-    path: "/statistics"
-  },
-  {
-    name: "My Club",
+    name: "Home",
     icon: <AiFillHome />,
-    path: "/my-club"
+    path: "/"
     
   },
   {
-    name: "Community",
-    icon: <FaUsers />,
-    path: "/community"
+    name: "Clubs",
+    icon: <AiFillHome />,
+    path: "/Clubs"
     
-  },
-  {
-    name: "Chat",
-    icon: <BsChatDots />,
-    path: "/chat"
-    
-  },
-  {
-    name: "League",
-    path: "/league",
-    icon: <GiSoccerBall />,
-  },
-  {
-    name: "News",
-    path: "/news",
-    icon: <MdOutlineArticle />,
-  },
+  }
+ 
 ]
 
-const othersItems = [
-  {
-    icon: <PieChartIcon />,
-    name: "Charts",
-    subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false }
-    ]
-  },
+// const othersItems = [
+//   {
+//     icon: <PieChartIcon />,
+//     name: "Charts",
+//     subItems: [
+//       { name: "Line Chart", path: "/line-chart", pro: false },
+//       { name: "Bar Chart", path: "/bar-chart", pro: false }
+//     ]
+//   },
   
-]
+// ]
 
 const AppSidebar = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar()
@@ -92,29 +67,29 @@ const AppSidebar = () => {
     location.pathname
   ])
 
-  useEffect(() => {
-    let submenuMatched = false
-    ;["main", "others"].forEach(menuType => {
-      const items = menuType === "main" ? navItems : othersItems
-      items.forEach((nav, index) => {
-        if (nav.subItems) {
-          nav.subItems.forEach(subItem => {
-            if (isActive(subItem.path)) {
-              setOpenSubmenu({
-                type: menuType,
-                index
-              })
-              submenuMatched = true
-            }
-          })
-        }
-      })
-    })
+  // useEffect(() => {
+  //   let submenuMatched = false
+  //   ;["main", "others"].forEach(menuType => {
+  //     const items = menuType === "main" ? navItems : othersItems
+  //     items.forEach((nav, index) => {
+  //       if (nav.subItems) {
+  //         nav.subItems.forEach(subItem => {
+  //           if (isActive(subItem.path)) {
+  //             setOpenSubmenu({
+  //               type: menuType,
+  //               index
+  //             })
+  //             submenuMatched = true
+  //           }
+  //         })
+  //       }
+  //     })
+  //   })
 
-    if (!submenuMatched) {
-      setOpenSubmenu(null)
-    }
-  }, [location, isActive])
+  //   if (!submenuMatched) {
+  //     setOpenSubmenu(null)
+  //   }
+  // }, [location, isActive])
 
   useEffect(() => {
     if (openSubmenu !== null) {
@@ -339,13 +314,13 @@ const AppSidebar = () => {
                     : "justify-start"
                 }`}
               >
-                {isExpanded || isHovered || isMobileOpen ? (
+                {/* {isExpanded || isHovered || isMobileOpen ? (
                   "Others"
                 ) : (
                   <HorizontaLDots />
-                )}
+                )} */}
               </h2>
-              {renderMenuItems(othersItems, "others")}
+              {/* {renderMenuItems(othersItems, "others")} */}
             </div>
           </div>
         </nav>
