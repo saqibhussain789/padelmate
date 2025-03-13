@@ -23,7 +23,7 @@ function App() {
         <Routes>
           {/* Dashboard Layout */}
           <Route element={<AppLayout />}>
-            <Route index path="/" element={<Home />} />
+            <Route index path="/" element={<Club />} />
             <Route path="/Clubs"   element={<Club/>}   />
             <Route index path="/Players" element={<Player />} />
           </Route>

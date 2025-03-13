@@ -9,7 +9,7 @@ import { useSidebar } from "../context/SidebarContext";
 import { CalenderIcon }from "../auth/icons"
 
 const navItems = [
-  { name: "Booking", icon: < CalenderIcon />, path: "/" },
+  // { name: "Booking", icon: < CalenderIcon />, path: "/" },
   { name: "Clubs", icon: <AiFillHome />, path: "/clubs" },
   { name: "Player", icon: <AiFillHome />, path: "/players" },
 
