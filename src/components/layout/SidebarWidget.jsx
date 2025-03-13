@@ -1,4 +1,4 @@
-export default function SidebarWidget() {
+const SidebarWidget = () => {
     return (
       <div
         className={`
@@ -21,4 +21,4 @@ export default function SidebarWidget() {
       </div>
     )
   }
-  
+  export default SidebarWidget;

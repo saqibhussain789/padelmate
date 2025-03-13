@@ -6,11 +6,13 @@ import { BsChatDots } from "react-icons/bs"; // Chat
 import { GiSoccerBall } from "react-icons/gi"; // League
 import { MdOutlineArticle } from "react-icons/md"; // News
 import { useSidebar } from "../context/SidebarContext";
-import { CalenderIcon }from "../icons"
+import { CalenderIcon }from "../auth/icons"
 
 const navItems = [
-  // { name: "Booking", icon: < CalenderIcon />, path: "/" },
+  { name: "Booking", icon: < CalenderIcon />, path: "/" },
   { name: "Clubs", icon: <AiFillHome />, path: "/clubs" },
+  { name: "Player", icon: <AiFillHome />, path: "/players" },
+
   // { name: "Community", icon: <FaUsers />, path: "/community" },
   // { name: "Chat", icon: <BsChatDots />, path: "/chat" },
   // { name: "League", icon: <GiSoccerBall />, path: "/league" },
@@ -34,7 +36,7 @@ const AppSidebar = () => {
     >
       <div className={`py-8 flex ${!isExpanded && !isHovered ? "lg:justify-center" : "justify-start"}`}>
         <Link to="/">
-          <img src="/images/logo/padelmates.svg" alt="Logo" width={isExpanded || isHovered || isMobileOpen ? 80 : 32} height={80} />
+          <img src="/images/logo/ACE-LOGO.png" alt="Logo" width={isExpanded || isHovered || isMobileOpen ? 80 : 32} height={80} />
         </Link>
       </div>
       <div className="flex flex-col overflow-y-auto duration-300 ease-linear no-scrollbar">

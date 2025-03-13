@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import { ScrollToTop } from "./components/common/ScrollToTop";
-import SignIn from "./pages/AuthPages/SignIn";
-import SignUp from "./pages/AuthPages/SignUp";
-import AppLayout from "./layout/AppLayout";
-import Home from "./pages/Dashboard/Home";
-import Club from "./pages/Dashboard/Club";
-import UserProfiles from "./pages/UserProfiles";
+// import SignIn from "./pages/AuthPages/SignIn";
+// import SignUp from "./pages/AuthPages/SignUp";
+import AppLayout from "./components/layout/AppLayout";
+
+import Home from "./components/Dashboard/Home";
+import Club from "./pages/Club/Club";
+
+import UserProfiles from "./pages/UserProfile/UserProfiles";
+import Player from "./pages/Player/Player";
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +25,7 @@ function App() {
           <Route element={<AppLayout />}>
             <Route index path="/" element={<Home />} />
             <Route path="/Clubs"   element={<Club/>}   />
+            <Route index path="/Players" element={<Player />} />
           </Route>
 
           {/* Others Page */}
@@ -28,8 +33,8 @@ function App() {
 
 
           {/* Auth Layout */}
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          {/* <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} /> */}
         </Routes>
       </Router>
     </>

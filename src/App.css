@@ -5,6 +5,21 @@ layer(base);
 
 @custom-variant dark (&:is(.dark *));
 
+
+/* Add this in your global or component-specific CSS file */
+
+.rbc-day-slot .rbc-time-slot {
+  background-color: #f0f8ff; /* Light blue background color for the blocks */
+}
+
+.rbc-day-slot .rbc-time-slot:hover {
+  background-color: #add8e6; /* Slightly darker blue on hover */
+}
+
+.rbc-event {
+  background-color: #ffeb3b; /* Change the event background color */
+}
+
 @theme {
   --font-*: initial;
   --font-outfit: Outfit, sans-serif;
