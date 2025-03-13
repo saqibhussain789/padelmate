@@ -15,7 +15,7 @@ const AddClub = () => {
   return (
     <div className="container mx-auto py-6 max-w-6xl">
       <div className="flex items-center mb-8">
-        <FaChevronLeft className="h-6 w-6 mr-2" />
+        {/* <FaChevronLeft className="h-6 w-6 mr-2" /> */}
         <h1 className="text-3xl font-bold">Edit Club Info</h1>
       </div>
 
@@ -408,7 +408,7 @@ const AddClub = () => {
       </div>
 
       <div className="mt-8 flex justify-end">
-        <button className="bg-navy-blue text-white px-12 py-6 text-lg">Save</button>
+        <button className="bg-[#2a7b9b] text-white px-6 py-2 text-lg rounded-xl">Save</button>
       </div>
     </div>
   );
