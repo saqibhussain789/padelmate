@@ -6,7 +6,7 @@ import { ScrollToTop } from "./components/general components/ScrollToTop";
 import AppLayout from "./components/layout/AppLayout";
 
 import Home from "./components/Dashboard/Home";
-import Club from "./components/Dashboard/Pages/Clubs/Club";
+import Club from "./components/Dashboard/Pages/Club/Club";
 import Player from "./components/Dashboard/Pages/Player/Player";
 import UserProfiles from "./pages/UserProfile/UserProfiles";
 
@@ -30,15 +30,11 @@ function App() {
 
           {/* Others Page */}
           <Route path="/profile" element={<UserProfiles />} />
-
-
-          {/* Auth Layout */}
-          {/* <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} /> */}
         </Routes>
       </Router>
     </>
   );
 }
+
 
 export default App;

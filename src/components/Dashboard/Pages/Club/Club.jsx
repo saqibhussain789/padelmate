@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import DataTableComponent from '../Clubs/ClubDataTable';
-import AddClubForm from '../Clubs/AddClubForm';
+import DataTableComponent from './ClubDataTable';
+import AddClubForm from './AddClubForm';
 
 
 const Club = () => {
