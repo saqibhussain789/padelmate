@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from "react"
-
 import { Link } from "react-router"
 import { useSidebar } from "../context/SidebarContext"
 import { ThemeToggleButton } from '../general components/ThemeToggleButton'
 import NotificationDropdown from "../header/NotificationDropdown"
 import UserDropdown from "../header/UserDropdown"
 import LanguageTranslator from "../general components/Translator"
+import Logo from '../../assets/ace_community_logo.png';
 
 const AppHeader = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false)
-
   const { isMobileOpen, toggleSidebar, toggleMobileSidebar } = useSidebar()
 
   const handleToggle = () => {
@@ -87,12 +86,12 @@ const AppHeader = () => {
           <Link to="/" className="lg:hidden">
             <img
               className="dark:hidden w-16 h-16"
-              src="/images/logo/ACE-LOGO.png"
+              src={Logo}
               alt="Logo"
             />
             <img
               className="hidden dark:block w-16 h-16"
-              src="/images/logo/ACE-LOGO.png"
+              src={Logo}
               alt="Logo"
             />
           </Link>
