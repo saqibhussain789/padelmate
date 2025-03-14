@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import DataTableComponent from './ClubDataTable';
 import AddClubForm from './AddClubForm';
+import { FaPlus, FaTimes } from "react-icons/fa";
 
 
 const Club = () => {
@@ -17,8 +18,8 @@ const Club = () => {
             {/* Button to toggle form visibility */}
             <button 
                 onClick={handleButtonClick} 
-                className="mb-4 bg-[#006e94] text-white px-4 py-2 rounded-lg hover:bg-[#328ba9]">
-                {showForm ? 'Close Form' : 'Add Club'}
+                className="mb-4 bg-[#006e94] text-white p-2 rounded-lg hover:bg-[#328ba9]">
+                 {showForm ? <FaTimes /> : <FaPlus />}
             </button>
           
             {showForm && <AddClubForm />}
