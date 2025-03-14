@@ -4,13 +4,9 @@ import { ScrollToTop } from "./components/general components/ScrollToTop";
 // import SignIn from "./pages/AuthPages/SignIn";
 // import SignUp from "./pages/AuthPages/SignUp";
 import SignIn from "./components/Dashboard/Pages/AuthPages/SignIn";
-import SignUp from "./components/Dashboard/Pages/AuthPages/SignUp";
 import AppLayout from "./components/layout/AppLayout";
 import Player from "./components/Dashboard/Pages/Player/Player";
-
-// import Home from "./components/Dashboard/Home";
 import Club from "./components/Dashboard/Pages/Club/Club";
-
 import UserProfiles from "../src/components/Dashboard/Pages/UserProfile/Profile";
 
 
@@ -32,7 +28,6 @@ function App() {
           <Route path="/profile" element={<UserProfiles />} />
           {/* Auth Routes */}
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </>
