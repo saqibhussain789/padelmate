@@ -11,7 +11,7 @@ import UserProfiles from "../src/components/Dashboard/Pages/UserProfile/Profile"
 
 
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
     <>
