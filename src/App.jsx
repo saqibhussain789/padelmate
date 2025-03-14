@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
-import { ScrollToTop } from "./components/common/ScrollToTop";
+import { ScrollToTop } from "./components/general components/ScrollToTop";
 // import SignIn from "./pages/AuthPages/SignIn";
 // import SignUp from "./pages/AuthPages/SignUp";
 import AppLayout from "./components/layout/AppLayout";
 
 import Home from "./components/Dashboard/Home";
-import Club from "./pages/Club/Club";
-
+import Club from "./components/Dashboard/Pages/Clubs/Club";
+import Player from "./components/Dashboard/Pages/Player/Player";
 import UserProfiles from "./pages/UserProfile/UserProfiles";
-import Player from "./pages/Player/Player";
+
 
 
 function App() {

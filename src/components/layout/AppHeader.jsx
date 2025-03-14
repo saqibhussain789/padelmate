@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react"
 
 import { Link } from "react-router"
 import { useSidebar } from "../context/SidebarContext"
-import { ThemeToggleButton } from '../common/ThemeToggleButton'
+import { ThemeToggleButton } from '../general components/ThemeToggleButton'
 import NotificationDropdown from "../header/NotificationDropdown"
 import UserDropdown from "../header/UserDropdown"
-import LanguageTranslator from "../common/Translator"
+import LanguageTranslator from "../general components/Translator"
 
 const AppHeader = () => {
   const [isApplicationMenuOpen, setApplicationMenuOpen] = useState(false)

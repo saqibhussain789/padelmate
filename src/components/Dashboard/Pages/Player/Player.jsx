@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import DataTableComponent from '../../components/Dashboard/DataTable';
-import AddClubForm from '../../components/form/addclub/AddClub';
+import PlayerDataTable from '../Player/PlayerDataTable';
+import AddPlayerForm from '../Player/AddPlayerForm';
 
 
-
-const Club = () => {
+const Player = () => {
     // State to manage form visibility
     const [showForm, setShowForm] = useState(false);
 
@@ -19,14 +18,14 @@ const Club = () => {
             <button 
                 onClick={handleButtonClick} 
                 className="mb-4 bg-[#006e94] text-white px-4 py-2 rounded-lg hover:bg-[#328ba9]">
-                {showForm ? 'Close Form' : 'Add Club'}
+                {showForm ? 'Close Form' : 'Add Player'}
             </button>
-          
-            {showForm && <AddClubForm />}
-            {!showForm &&   <DataTableComponent />}
+            {/* Conditionally render the AddClubForm based on showForm state */}
+            {showForm && <AddPlayerForm />}
+            {!showForm &&   <PlayerDataTable />}
           
         </div>
     );
 }
 
-export default Club;
+export default Player;
