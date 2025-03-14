@@ -1,29 +1,23 @@
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Link, useLocation } from "react-router";
-import { AiFillHome } from "react-icons/ai"; // My Club/Home
-import { FaUsers } from "react-icons/fa"; // Community
-import { BsChatDots } from "react-icons/bs"; // Chat
-import { GiSoccerBall } from "react-icons/gi"; // League
-import { MdOutlineArticle } from "react-icons/md"; // News
+import { useCallback, useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom"; // Fixed import
+import { GiTrophyCup } from "react-icons/gi";
+import { FaRunning } from "react-icons/fa";
 import { useSidebar } from "../context/SidebarContext";
-import { CalenderIcon }from "../auth/icons"
 
 const navItems = [
-  // { name: "Booking", icon: < CalenderIcon />, path: "/" },
-  { name: "Clubs", icon: <AiFillHome />, path: "/clubs" },
-  { name: "Player", icon: <AiFillHome />, path: "/players" },
-
-  // { name: "Community", icon: <FaUsers />, path: "/community" },
-  // { name: "Chat", icon: <BsChatDots />, path: "/chat" },
-  // { name: "League", icon: <GiSoccerBall />, path: "/league" },
-  // { name: "News", icon: <MdOutlineArticle />, path: "/news" },
+  { name: "Clubs", icon: <GiTrophyCup />, path: "/clubs" },
+  { name: "Players", icon: <FaRunning />, path: "/players" },
 ];
 
 const AppSidebar = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const location = useLocation();
+  const [activePath, setActivePath] = useState("/clubs"); // Default active page
 
-  const isActive = useCallback((path) => location.pathname === path, [location.pathname]);
+  // Update active path when location changes
+  useEffect(() => {
+    setActivePath(location.pathname);
+  }, [location.pathname]);
 
   return (
     <aside
@@ -43,12 +37,21 @@ const AppSidebar = () => {
         <nav className="mb-6">
           <div className="flex flex-col gap-4">
             <div>
-              <h2 className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${!isExpanded && !isHovered ? "lg:justify-center" : "justify-start"}`}>Menu</h2>
+              <h2 className={`mb-4 text-xs uppercase flex leading-[20px] text-gray-400 ${!isExpanded && !isHovered ? "lg:justify-center" : "justify-start"}`}>
+                Menu
+              </h2>
               <ul className="flex flex-col gap-4">
                 {navItems.map((nav) => (
                   <li key={nav.name}>
-                    <Link to={nav.path} className={`menu-item group ${isActive(nav.path) ? "menu-item-active" : "menu-item-inactive"}`}>
-                      <span className={`menu-item-icon-size ${isActive(nav.path) ? "menu-item-icon-active" : "menu-item-icon-inactive"}`}>{nav.icon}</span>
+                    <Link
+                      to={nav.path}
+                      className={`menu-item group ${
+                        activePath === nav.path ? "menu-item-active bg-[#2A7D9B] text-white" : "menu-item-inactive text-gray-700"
+                      }`}
+                    >
+                      <span className={`menu-item-icon-size ${activePath === nav.path ? "text-white" : "text-gray-500"}`}>
+                        {nav.icon}
+                      </span>
                       {(isExpanded || isHovered || isMobileOpen) && <span className="menu-item-text">{nav.name}</span>}
                     </Link>
                   </li>

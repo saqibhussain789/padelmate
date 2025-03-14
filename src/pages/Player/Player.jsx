@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import DataTableComponent from '../../components/Dashboard/DataTable';
-import AddClubForm from '../../components/form/addclub/AddClub';
 
-
+import AddPlayer from '../../components/form/addPlayer/AddPlayer';
+import { FaPlus, FaTimes } from "react-icons/fa";
 
 const Player = () => {
     // State to manage form visibility
@@ -18,13 +18,14 @@ const Player = () => {
             {/* Button to toggle form visibility */}
             <button 
                 onClick={handleButtonClick} 
-                className="mb-4 bg-[#006e94] text-white px-4 py-2 rounded-lg hover:bg-[#328ba9]">
-                {showForm ? 'Close Form' : 'Add Player'}
+                className="mb-4 bg-[#006e94] text-white p-2 rounded-lg hover:bg-[#328ba9] flex items-center gap-2"
+            >
+                {showForm ? <FaTimes /> : <FaPlus />}
+                
             </button>
-            {/* Conditionally render the AddClubForm based on showForm state */}
-            {showForm && <AddClubForm />}
-            {!showForm &&   <DataTableComponent />}
-          
+            
+            {/* Conditionally render the AddClubForm or DataTableComponent */}
+            {showForm ? <AddPlayer /> : <DataTableComponent />}
         </div>
     );
 }

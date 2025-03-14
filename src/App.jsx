@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import { ScrollToTop } from "./components/common/ScrollToTop";
-// import SignIn from "./pages/AuthPages/SignIn";
-// import SignUp from "./pages/AuthPages/SignUp";
+import SignIn from "./pages/AuthPages/SignIn";
+import SignUp from "./pages/AuthPages/SignUp";
 import AppLayout from "./components/layout/AppLayout";
 
-import Home from "./components/Dashboard/Home";
+// import Home from "./components/Dashboard/Home";
 import Club from "./pages/Club/Club";
 
 import UserProfiles from "./pages/UserProfile/UserProfiles";
@@ -33,8 +33,8 @@ function App() {
 
 
           {/* Auth Layout */}
-          {/* <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} /> */}
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
       </Router>
     </>
