@@ -4,7 +4,6 @@ import AddPlayerForm from '../Player/AddPlayerForm';
 
 
 import { FaPlus, FaTimes } from "react-icons/fa";
-import AddPlayer from '../../../form/addPlayer/AddPlayer';
 
 const Player = () => {
     // State to manage form visibility

@@ -11,15 +11,13 @@ import Player from "./components/Dashboard/Pages/Player/Player";
 // import Home from "./components/Dashboard/Home";
 import Club from "./components/Dashboard/Pages/Club/Club";
 
-import UserProfiles from "./pages/UserProfile/UserProfiles";
-
+import UserProfiles from "../src/components/Dashboard/Pages/UserProfile/Profile";
 
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-
     <>
       <Router>
         <ScrollToTop />
@@ -30,12 +28,9 @@ function App() {
             <Route path="/Clubs"   element={<Club/>}   />
             <Route index path="/Players" element={<Player />} />
           </Route>
-
           {/* Others Page */}
           <Route path="/profile" element={<UserProfiles />} />
-
-
-          {/* Auth Layout */}
+          {/* Auth Routes */}
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
         </Routes>
