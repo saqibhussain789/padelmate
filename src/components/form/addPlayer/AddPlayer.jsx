@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddClub = () => {
+const AddPlayer = () => {
   const [defaultCancellationTime, setDefaultCancellationTime] = useState(6);
   const [bookingOpenHours, setBookingOpenHours] = useState(1);
   const [bookingCloseHours, setBookingCloseHours] = useState(1);
@@ -14,7 +14,7 @@ const AddClub = () => {
   return (
     <div className="container mx-auto py-6 max-w-6xl">
       <div className="flex items-center mb-8">
-        <h1 className="text-3xl font-bold">Edit Club Info</h1>
+        <h1 className="text-3xl font-bold">Edit Player Info</h1>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -30,7 +30,7 @@ const AddClub = () => {
           </div>
 
           <div>
-            <h2 className="text-lg font-semibold mb-2">CLUB NAME</h2>
+            <h2 className="text-lg font-semibold mb-2">Player NAME</h2>
             <input
               className="w-full p-2 border rounded-md"
               defaultValue="Padel Mates"
@@ -463,4 +463,4 @@ const AddClub = () => {
   );
 };
 
-export default AddClub;
+export default AddPlayer;

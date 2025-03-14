@@ -8,6 +8,14 @@ import AppLayout from "./components/layout/AppLayout";
 import Home from "./components/Dashboard/Home";
 import Club from "./components/Dashboard/Pages/Club/Club";
 import Player from "./components/Dashboard/Pages/Player/Player";
+import { ScrollToTop } from "./components/common/ScrollToTop";
+import SignIn from "./pages/AuthPages/SignIn";
+import SignUp from "./pages/AuthPages/SignUp";
+import AppLayout from "./components/layout/AppLayout";
+
+// import Home from "./components/Dashboard/Home";
+import Club from "./pages/Club/Club";
+
 import UserProfiles from "./pages/UserProfile/UserProfiles";
 
 
