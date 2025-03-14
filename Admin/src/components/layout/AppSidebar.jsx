@@ -12,7 +12,7 @@ const navItems = [
 const AppSidebar = () => {
   const { isExpanded, isMobileOpen, isHovered, setIsHovered } = useSidebar();
   const location = useLocation();
-  const [activePath, setActivePath] = useState("/clubs"); // Default active page
+  const [activePath, setActivePath] = useState("/clubs"); 
 
   // Update active path when location changes
   useEffect(() => {
