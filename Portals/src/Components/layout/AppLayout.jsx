@@ -19,7 +19,7 @@ const LayoutContent = () => {
           isMobileOpen
             ? "ml-0" // Sidebar fully closes on mobile
             : isExpanded || isHovered
-            ? "lg:ml-[290px]" // Expanded sidebar on larger screens
+            ? "lg:ml-[240px]" // Expanded sidebar on larger screens
             : "lg:ml-[90px]" // Compact sidebar for desktops
         }`}
       >
